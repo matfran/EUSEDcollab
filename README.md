@@ -1,5 +1,5 @@
 # EUSEDcollab
-The code associated with the EUSEDcollab sediment yield data repository
+The code associated with the EUSEDcollab sediment yield data repository: https://doi.org/10.6084/m9.figshare.22117559
 
 The repository contains the following code:
 
