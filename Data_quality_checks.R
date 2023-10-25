@@ -14,21 +14,24 @@ library(jsonlite)
 library(lubridate)
 
 
+
 # User Defined Variables --------------------------------------------------
 
-# directory that contains CSV files - to be defined
+# The directory that R script resides. 
+ROOT_DIR <- dirname(rstudioapi::getSourceEditorContext()$path) # it works only for Rstudio, set manually in other cases
 
-CSV_DIR <- ""
+# directory that contains CSV files - to be defined
+CSV_DIR <- file.path(ROOT_DIR, "EUSEDcollab_data_repository", "Q_SSL")
 
 # search pattern for csv that start with ID
 PATTERN = "^ID_*.*csv$"
 
 
 # The OUTPUT Directory - to be defined
-OUTPUT_DIR <-"/eos/jeodpp/data/projects/SOIL-NACA/Francis/EUSEDcollab/Output_16022023"
+OUTPUT_DIR <-file.path(ROOT_DIR, "EUSEDcollab_data_repository", "Q_SSL_QUALITY_CONTROL")
 
 # Metadata file - to be defined
-METADATA_FN  <- "ALL_METADATA.csv"
+METADATA_FN  <- file.path(ROOT_DIR, "EUSEDcollab_data_repository", "ALL_METADATA.csv")
 
 
 # just a read_delim option, no need to touch it
